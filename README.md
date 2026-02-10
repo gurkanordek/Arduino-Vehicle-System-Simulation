@@ -26,7 +26,7 @@ Bu simülasyon, modern araçlarda bulunan sensör tabanlı otomasyon ve güvenli
 
 Projenin Proteus üzerindeki devre şeması `src` klasöründe bulunmaktadır.
 
-![Devre Şeması](src/devre.png)
+![Devre Şeması](devre.png)
 
 ### Nasıl Çalıştırılır?
 
@@ -45,8 +45,8 @@ Projenin Proteus üzerindeki devre şeması `src` klasöründe bulunmaktadır.
 │   ├── ArduinoMega25602TEP.LIB # Kütüphane Dosyası
 │   └── ArduinoMega25602TEP.IDX # Index Dosyası
 ├── src/
-│   ├── PROJE2A.ino             # Arduino Kaynak Kodu
-│   └── devre.png               # Devre Görüntüsü
+│   └── PROJE2A.ino             # Arduino Kaynak Kodu
+├── devre.png                   # Devre Görüntüsü
 └── README.md                   # Proje Dokümantasyonu
 ```
 
