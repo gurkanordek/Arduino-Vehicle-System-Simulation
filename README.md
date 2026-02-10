@@ -1,62 +1,62 @@
 # 🚗 Arduino Car Control & Safety System Simulation
 
-Bu proje, **Arduino Mega 2560** mikrodenetleyicisi kullanılarak geliştirilmiş kapsamlı bir **Araç Kontrol ve Güvenlik Sistemi Simülasyonudur**. Proteus üzerinde tasarlanan devre ve Arduino C++ kodu ile bir otomobilin temel elektronik fonksiyonlarını (motor kontrolü, farlar, klima, güvenlik sistemleri vb.) simüle eder.
+This project is a comprehensive **Vehicle Control and Safety System Simulation** developed using the **Arduino Mega 2560** microcontroller. It simulates the basic electronic functions of a car (engine control, headlights, air conditioning, safety systems, etc.) using a circuit designed in Proteus and Arduino C++ code.
 
-## 🌟 Proje Hakkında
+## 🌟 About the Project
 
-Bu simülasyon, modern araçlarda bulunan sensör tabanlı otomasyon ve güvenlik sistemlerinin çalışma mantığını göstermek amacıyla tasarlanmıştır. Sistem; sıcaklık, ışık seviyesi ve yakıt durumu gibi çevresel ve dahili faktörleri sürekli izleyerek sürücüye görsel/işitsel geri bildirim verir ve otomatik aksiyonlar alır.
+This simulation is designed to demonstrate the working logic of sensor-based automation and safety systems found in modern vehicles. The system continuously monitors environmental and internal factors such as temperature, light level, and fuel status to provide visual/auditory feedback to the driver and take automatic actions.
 
-### Temel Özellikler
+### Key Features
 
-* **Motor Kontrol Sistemi:** Emniyet kemeri takılı olmadan ve kapılar kapalı olmadan motorun çalışmasını engelleyen güvenlik kilidi.
-* **Otomatik Far Sistemi:** LDR sensörü ile ortam ışığını algılayıp farları otomatik açıp kapatma.
-* **Akıllı Klima Sistemi:** LM35 sıcaklık sensörü ile ortam sıcaklığını ölçerek belirli bir eşiğin (25°C) üzerinde klimayı otomatik devreye alma.
-* **Yakıt Yönetim Sistemi:** Potansiyometre ile simüle edilen yakıt seviyesini LCD ekranda gösterme, düşük seviyelerde görsel ve yazılı uyarılar verme, yakıt bittiğinde motoru otomatik durdurma.
-* **Kapı Güvenlik Sistemi:** Kapı açıldığında RGB LED ile görsel uyarı verme ve motoru durdurma.
-* **LCD Bilgi Ekranı:** Anlık durum bilgilerini (Sıcaklık, Yakıt, Uyarılar) sürücüye aktaran 16x2 LCD ekran.
+* **Engine Control System:** A safety lock that prevents the engine from running without the seat belt fastened and doors closed.
+* **Automatic Headlight System:** Detects ambient light using an LDR sensor to automatically turn headlights on or off.
+* **Smart Air Conditioning System:** Measures ambient temperature with an LM35 sensor and automatically activates the AC above a certain threshold (25°C).
+* **Fuel Management System:** Displays the fuel level simulated by a potentiometer on the LCD screen, gives visual and written warnings at low levels, and automatically stops the engine when fuel runs out.
+* **Door Safety System:** Provides a visual warning with an RGB LED and stops the engine when a door is opened.
+* **LCD Information Display:** Transmits instant status information (Temperature, Fuel, Warnings) to the driver via a 16x2 LCD screen.
 
-## 🛠️ Kullanılan Donanımlar (Simülasyon)
+## 🛠️ Hardware Used (Simulation)
 
-* **Mikrodenetleyici:** Arduino Mega 2560
-* **Sensörler:** LM35 (Sıcaklık), LDR (Işık), Potansiyometre (Yakıt Seviyesi).
-* **Aktüatörler:** DC Motorlar, 16x2 LCD Ekran, RGB LED, Standart LED'ler, Buzzer.
-* **Sürücü:** BD139 Transistör.
+* **Microcontroller:** Arduino Mega 2560
+* **Sensors:** LM35 (Temperature), LDR (Light), Potentiometer (Fuel Level).
+* **Actuators:** DC Motors, 16x2 LCD Screen, RGB LED, Standard LEDs, Buzzer.
+* **Driver:** BD139 Transistor.
 
-## 🔌 Devre Şeması ve Kurulum
+## 🔌 Circuit Diagram and Installation
 
-Projenin Proteus üzerindeki devre şeması `src` klasöründe bulunmaktadır.
+The Proteus circuit diagram of the project is located in the root directory.
 
-![Devre Şeması](devre.png)
+![Circuit Diagram](devre.png)
 
-### Nasıl Çalıştırılır?
+### How to Run?
 
-1.  Bu repoyu bilgisayarınıza indirin.
-2.  `src/PROJE2A.ino` dosyasını Arduino IDE ile derleyin ve `.hex` dosyasını oluşturun.
-3.  `simulation/PROJE2.pdsprj` dosyasını **Proteus** ile açın.
-4.  Arduino Mega kartına çift tıklayıp oluşturduğunuz `.hex` dosyasını "Program File" kısmına yükleyin.
-5.  Simülasyonu başlatın.
+1.  Download/Clone this repository to your computer.
+2.  Open `src/PROJE2A.ino` with Arduino IDE, compile it, and export the `.hex` binary file.
+3.  Open the `simulation/PROJE2.pdsprj` file with **Proteus**.
+4.  Double-click the Arduino Mega board and load the generated `.hex` file into the "Program File" section.
+5.  Start the simulation.
 
-## 📂 Dosya Yapısı
+## 📂 File Structure
 
 ```bash
 .
 ├── simulation/
-│   ├── PROJE2.pdsprj           # Proteus Proje Dosyası
-│   ├── ArduinoMega25602TEP.LIB # Kütüphane Dosyası
-│   └── ArduinoMega25602TEP.IDX # Index Dosyası
+│   ├── PROJE2.pdsprj           # Proteus Project File
+│   ├── ArduinoMega25602TEP.LIB # Library File
+│   └── ArduinoMega25602TEP.IDX # Index File
 ├── src/
-│   └── PROJE2A.ino             # Arduino Kaynak Kodu
-├── devre.png                   # Devre Görüntüsü
-└── README.md                   # Proje Dokümantasyonu
+│   └── PROJE2A.ino             # Arduino Source Code
+├── devre.png                   # Circuit Image
+└── README.md                   # Project Documentation
 ```
 
-## 📝 Kod Özeti
-Proje kodu src/PROJE2A.ino içerisinde bulunmaktadır ve şu işlevleri yerine getirir:
+## 📝 Code Summary
+The project code is located in src/PROJE2A.ino and performs the following functions:
 
-* **Sensör Okuma:** Sıcaklık (LM35), Işık (LDR) ve Yakıt (Potansiyometre) verilerini analog pinlerden okur.
+* **Sensor Reading:** Reads Temperature (LM35), Light (LDR), and Fuel (Potentiometer) data from analog pins.
 
-* **Güvenlik Kontrolü:** loop döngüsü içinde sürekli olarak kapı ve emniyet kemeri durumunu denetler (digitalRead).
+* **Safety Control:** Continuously checks door and seat belt status within the loop cycle (digitalRead).
 
-* **LCD Yönetimi:** LiquidCrystal kütüphanesi ile anlık uyarıları ekrana yansıtır.
+* **LCD Management:** Displays instant warnings on the screen using the LiquidCrystal library.
 
-* **Aktüatör Kontrolü:** Koşullar sağlandığında motorları ve LED'leri tetikler.
+* **Actuator Control:** Triggers motors and LEDs when conditions are met.
